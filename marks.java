@@ -32,6 +32,8 @@ public class marks {
             System.out.println("second class");
         } else if (cgpa >= 50) {
             System.out.println("pass");
+        } else {
+            System.out.println("you are failed!!!");
         }
 
     }
