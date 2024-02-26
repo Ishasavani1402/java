@@ -26,7 +26,6 @@ public class rock_paper_scissor {
                 System.out.println("you win!!");
             } else {
                 System.out.println("Computer wins!!");
-                // break;
             }
 
             System.out.println("computer's choice is : " + computerchoice);
