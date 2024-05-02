@@ -1,12 +1,10 @@
 import java.util.Scanner;
 
 public class quicksort {
-    static void inputarray(int qsort[], int length) {
-        Scanner sc = new Scanner(System.in);
+    static void inputarray(int qsort[], int length , Scanner sc ) {
         for (int i = 0; i < qsort.length; i++) {
             qsort[i] = sc.nextInt();
         }
-        sc.close();
     }
 
     static void displayarray(int qsort[], int length) {
@@ -56,9 +54,8 @@ public class quicksort {
         System.out.println("Enter length of array:");
         int length = sc.nextInt();
         int qsort[] = new int[length];
-        System.out.printf("enter %d element:", length);
-    
-        inputarray(qsort, length);
+        System.out.println("enter  elements : ");
+        inputarray(qsort, length , sc);
         int low = 0, high = length - 1;
         System.out.println("before sorting:");
         displayarray(qsort, length);
