@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class mergesort {
-    public static void inputarray(int msort[], int length) {
-        Scanner sc = new Scanner(System.in);
+    public static void inputarray(int msort[], int length , Scanner sc) {
         for (int i = 0; i < msort.length; i++) {
             msort[i] = sc.nextInt();
         }
@@ -67,7 +66,7 @@ public class mergesort {
         int low = 0;
         int high = length - 1;
         System.out.printf("enter %d element:", length);
-        inputarray(msort, length);
+        inputarray(msort, length , sc);
         System.out.println("before sorting:");
         displayarray(msort, length);
         performmergesort(msort, low, high);
