@@ -1,23 +1,20 @@
 import java.util.Scanner;
 
-public class selectionsort {
-
-    static void inputarray(int selsort[], int length) {
-        Scanner sc = new Scanner(System.in);
+class s_sort {
+    public static void inputarray(int selsort[], int length, Scanner sc) {
         for (int i = 0; i < selsort.length; i++) {
             selsort[i] = sc.nextInt();
         }
-        sc.close();
     }
 
-    static void displayarray(int selsort[], int length) {
+    public static void displayarray(int selsort[], int length) {
 
         for (int i = 0; i < selsort.length; i++) {
             System.out.println(selsort[i]);
         }
     }
 
-    static void performselectionsort(int selsort[], int length) {
+    public static void performselectionsort(int selsort[], int length) {
         for (int i = 0; i < selsort.length - 1; i++) {
             int min = i;// assum first element is min
             for (int j = i + 1; j < selsort.length; j++) {
@@ -31,6 +28,9 @@ public class selectionsort {
             selsort[min] = temp;
         }
     }
+}
+
+public class selectionsort {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -40,12 +40,12 @@ public class selectionsort {
 
         int selsort[] = new int[length];
         System.out.printf("enter %d element", length);
-        inputarray(selsort, length);
+        s_sort.inputarray(selsort, length, sc);
         System.out.println("display array element befor sorting:");
-        displayarray(selsort, length);
+        s_sort.displayarray(selsort, length);
         System.out.println("display array element after sorting:");
-        performselectionsort(selsort, length);
-        displayarray(selsort, length);
+        s_sort.performselectionsort(selsort, length);
+        s_sort.displayarray(selsort, length);
 
         sc.close();
     }
